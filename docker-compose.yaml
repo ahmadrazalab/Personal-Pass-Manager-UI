@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  ubuntu:
+    image: pass-gen:init    # this img is replacable- you can use my image from dockerhub or you can build custom image from dockerfile (you can find in this repo) 
+    container_name: pass-gen
+    networks:
+      - my_network
+    ports:
+      - "8555:80" # 8444 is changable as per you requirements
+    # volumes:
+    #   - ./pass-gen:/var/www/html   # mounting cureent dir for data integrity
+
+  db:
+    image: mysql:latest
+    container_name: mysql_backend
+    networks:
+      - my_network
+    volumes:
+      # - ./db_data:/var/lib/mysql    # db data storage in current dir named db_data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql   # database table creation script 
+    environment:        # db info do not change it you must have to change it from application file too.
+      MYSQL_ROOT_PASSWORD: pass-gen
+      MYSQL_DATABASE: password_manager
+      MYSQL_USER: pass-gen
+      MYSQL_PASSWORD: pass-gen
+    expose:
+      - 3306  
+
+networks:
+  my_network:

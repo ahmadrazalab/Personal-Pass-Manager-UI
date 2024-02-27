@@ -1,5 +1,7 @@
 # PASSWORD MANAGER AND GENERATOR TOOL on WEB
 
+![alt text](image.png)
+
 ```
 git clone https://github.com/URL
 cd <folder>
