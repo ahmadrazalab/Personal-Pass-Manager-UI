@@ -1,0 +1,4 @@
+DB_HOST=db
+DB_USER=pass-gen
+DB_PASSWORD=pass-gen
+DB_DATABASE=password_manager
