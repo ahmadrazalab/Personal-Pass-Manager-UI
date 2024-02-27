@@ -2,6 +2,8 @@
 
 ![alt text](image.png)
 
+
+>> HOW TO USE
 ```
 git clone https://github.com/URL
 cd <folder>
@@ -12,11 +14,7 @@ npm start
 http://localhost:3000/
 ```
 
-
-
->> Update MySQL connection in server.js file
-// MySQL Connection [user, pass, host, port]
-
+>> DB CREATION QUERY
 ```
 CREATE DATABASE password_manager;
 
