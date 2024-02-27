@@ -3,6 +3,7 @@
 ```
 git clone https://github.com/URL
 cd <folder>
+#update env.example file with your creds
 mv .env.example .env
 npm i 
 npm start
