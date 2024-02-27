@@ -8,12 +8,17 @@ const app = express();
 const port = 3000;
 
 // MySQL Connection
+// Require and configure dotenv
+require('dotenv').config();
+
+// MySQL Connection
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'admin',
-    password: 'Itp@ssw0rd',
-    database: 'password_manager'
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE
 });
+
 
 // Connect to MySQL database
 connection.connect((err) => {

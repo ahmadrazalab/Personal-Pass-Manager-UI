@@ -3,6 +3,7 @@
 ```
 git clone https://github.com/URL
 cd <folder>
+mv .env.example .env
 npm i 
 npm start
 http://localhost:3000/
