@@ -10,8 +10,10 @@ http://localhost:3000/
 
 
 
-```
+>> Update MySQL connection in server.js file
+// MySQL Connection [user, pass, host, port]
 
+```
 CREATE DATABASE password_manager;
 
 USE password_manager;
@@ -22,5 +24,4 @@ CREATE TABLE passwords (
   username VARCHAR(255) NOT NULL,
   password VARCHAR(255) NOT NULL
 );
-
 ```
